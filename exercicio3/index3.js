@@ -10,7 +10,7 @@ fs.readFile(filePath, 'utf8', (err, data) => {
     }
 
     const jsonData = JSON.parse(data);
-    const faturamento = jsonData.faturamento_diario.map(item => item.valor);
+    const faturamento = jsonData.map(item => item.valor);
 
     if (faturamento.length === 0) return;
 
